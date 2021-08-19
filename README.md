@@ -1,3 +1,1 @@
-# COMP9417 Homework 2
-
-Repository for Homework set 2
+There is branch for each question (1-4)
