@@ -73,16 +73,7 @@ def q1b():
     # Train initial model
     mod = LogisticRegression(penalty="l1", solver="liblinear", C=C).fit(Xtrain, Ytrain)
     B0 = mod.intercept_[0]
-    coefs_sum = sum(mod.coef_[0])
-    # print(B0)
-    # print(coefs_sum)
-    # print(math.exp(B0 + coefs_sum))
-    # print(mod.coef_[0])
-
-    # Calculate p value for bernoulli distribution
-    # TODO: Probability here is too high
-    prob = math.exp(B0 + coefs_sum) / (1 + math.exp(B0 + coefs_sum))
-    # print(prob)
+    coefs = mod.coef_[0]
 
     # Find confidence
     coef_mat = np.zeros(shape=(B,p))
@@ -91,12 +82,21 @@ def q1b():
         b_sample = np.random.choice(np.arange(Xtrain.shape[0]), size=Xtrain.shape[0])
         Xtrain_b = Xtrain[b_sample]
 
-        # The Ytrain_b must come from a bernoulli distribution
-        Ytrain_b = np.random.binomial(n=1, p=prob, size=Xtrain.shape[0])
-        print(Ytrain_b)
+        Ytrain_b = np.zeros(shape=(1,Xtrain.shape[0]))
+        idx = 0
+        for i in Xtrain_b:
+            # Calculate "p" for bernoulli for this instance
+            prob = math.exp(B0 + coefs.T @ i) / (1 + math.exp(B0 + coefs.T @ i))
 
-        # Train new model
-        mod_b = LogisticRegression(penalty="l1", solver="liblinear", C=C).fit(Xtrain_b, Ytrain_b)
+            # The Ytrain_b must come from a bernoulli distribution
+            response = np.random.binomial(n=1, p=prob, size=1)
+
+            # Add to ytrain data
+            Ytrain_b[0, idx] = response[0]
+            idx +=1
+
+        # Train new model fit to the b_set
+        mod_b = LogisticRegression(penalty="l1", solver="liblinear", C=C).fit(Xtrain_b, Ytrain_b[0])
 
         # store coefficients
         coef_mat[b,:] = mod_b.coef_
