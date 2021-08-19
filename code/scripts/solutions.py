@@ -27,7 +27,8 @@ def map_to_class(zero_or_one):
 
 # Code based off of NeuralLearning lab implementation
 def train_perceptron(X, y, eta):
-    w = np.zeros((1, len(X[0])))           # init weight vector to 0s
+    # w = np.zeros((1, len(X[0])))           # init weight vector to 0s
+    w = np.random.random((1, len(X[0])))
     nmb_iter = 0
     MAX_ITER = 10000
 
@@ -36,23 +37,19 @@ def train_perceptron(X, y, eta):
         nmb_iter += 1           
         
         # check which indices we make mistakes on, and pick one randomly to update
-        xTw = X @ w.T
-        xTw = np.array([list(map(map_to_class, xTw.tolist()))]).transpose()
-        yXw = y * xTw
+        yXw = (y * X) @ w.T
         mistake_idxs = np.where(yXw < 0)[0]
         if mistake_idxs.size > 0:
             i = np.random.choice(mistake_idxs)        # pick idx randomly
             w = w + eta * y[i] * X[i]                 # update w
-            # print(y[i])
-            # print(X[i])
-            print(f"Iteration {nmb_iter}: w = {w}")
-            break
+            # print(f"Iteration {nmb_iter}: w = {w}")
 
         else: # no mistake made
             print(f"Converged after {nmb_iter} iterations")
             return
 
     print(f"Did not converge after {MAX_ITER} iterations")
+
 
 # Generates the dataset for question 2b.
 #
@@ -77,12 +74,17 @@ def generate_data_set(positive_classes):
     return np.array(domain), np.array(Y)
 
 def q2b():
-    # i)
-    # positive_classes_i = [(0,1,0), (0,1,1), (1,0,0), (1,1,1)]
-    positive_classes_ii = [(0,0), (0,1)]
-    X, Y = generate_data_set(positive_classes_ii)
+    positive_classes_i = [(0,1,0), (0,1,1), (1,0,0), (1,1,1)]
+    positive_classes_ii = [(0,1,1), (1,0,0), (1,1,0), (1,1,1)]
+    positive_classes_iii = [(0,1,0,0), (0,1,0,1), (0,1,1,0), (1,0,0,0), (1,1,0,0), (1,1,1,0), (1,1,1,1)]
+    positive_classes_iv = [(1,0,0,0,0,0,0), (1,0,0,0,0,0,1), (1,0,0,0,1,0,1)]
 
-    train_perceptron(X, Y, 0.1)
+    all_classes = [positive_classes_i, positive_classes_ii, positive_classes_iii, positive_classes_iv]
+
+    for c in all_classes:
+        X, Y = generate_data_set(c)
+        train_perceptron(X, Y, 1)
+
 
 ### MAIN ###
 
