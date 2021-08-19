@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  19 AUG 2021 09:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  19 AUG 2021 11:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1154,11 +1154,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--74
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//NPBootstrap.png>] [2]
-<../code/outputs//q1a.png, id=32, 1080.035pt x 887.315pt>
+<../code/outputs//q1a.png, id=32, 1106.1325pt x 892.33376pt>
 File: ../code/outputs//q1a.png Graphic file (type png)
 <use ../code/outputs//q1a.png>
 Package pdftex.def Info: ../code/outputs//q1a.png  used on input line 89.
-(pdftex.def)             Requested size: 432.00635pt x 354.91971pt.
+(pdftex.def)             Requested size: 442.44516pt x 356.92719pt.
  [3 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q1a.png>] (/Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FE77A0CE9B62047C92E43303E38076BB;63.
@@ -1172,7 +1172,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  138i,5n,141p,599b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch_rydp4l.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Italic.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (3 pages, 368271 bytes).
+Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (3 pages, 370923 bytes).
 PDF statistics:
  62 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
