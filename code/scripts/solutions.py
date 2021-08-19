@@ -8,9 +8,12 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import log_loss, make_scorer
 
 import math
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import itertools
+
+Q2D_DIR = "data/Q2_mono_dict.npy"
 
 ### UTILS ###
 
@@ -85,6 +88,59 @@ def q2b():
         X, Y = generate_data_set(c)
         train_perceptron(X, Y, 1)
 
+def mse(y,yhat):
+    return np.mean(np.square(y-yhat))
+
+def your_function(y):   
+    MAX_ITER = 10000
+    for t in range(MAX_ITER):
+        violation = False
+        for i in range(len(y) - 1):
+
+            # Violation of non-decreasing constraint, update with average of 2 points
+            if y[i] > y[i+1]:
+                violation = True    # Mark that there was a violation
+                # print(f"violation at index {i}")
+                # print(f"{y[i]} -> {(y[i] + y[i+1]) / 2}")
+                # print(f"old y: {y}")
+                y[i] = float((y[i] + y[i+1]) / 2)
+                # print(f"new y: {y}")
+
+        if violation == False:
+            print(f"Optimal found after {t} iterations")
+            return y
+
+    print(f"Did not converge after {MAX_ITER} iterations!")
+
+def q2d():
+    
+    matplotlib.rc("font", **{"size" : 14}) # make plot text more visible
+
+    # load in data
+    y_dict = np.load(Q2D_DIR, allow_pickle=True).item()
+
+    # create plot
+    fig, ax = plt.subplots(3,2, figsize=(14,14))
+    plot_titles = ["(i)", "(ii)", "(iii)", "(iv)", "(v)", "(vi)"]
+    for i, ax in enumerate(ax.flat):
+        y = y_dict[plot_titles[i]]
+        x = np.arange(y.shape[0])
+
+        betahat = your_function(np.array(y)) ### update this line
+        return
+
+        # plot data and fit
+        ax.scatter(x, y, marker="o", label="y")
+        ax.plot(x, betahat,color="orange", linestyle="-", marker="s",label=r"$\hat{\beta}$") # if you have latex issues, replace with label="hatbeta"
+
+        # set title and put legend in a good spot
+        mse_bh = np.round(mse(y,betahat), 4)
+        ax.set_title(f"part={plot_titles[i]}, mse={mse_bh}")
+        ax.legend(loc="best")
+
+    plt.tight_layout()
+    plt.savefig("pickAName.png", dpi=400) ### update this line
+    plt.show()
 
 ### MAIN ###
 
@@ -100,7 +156,8 @@ if __name__ == "__main__":
     args = command_line_parsing().parse_args()
 
     questions = {
-        "q2b": q2b
+        "q2b": q2b,
+        "q2d": q2d
     }
 
     # Execute the given command
