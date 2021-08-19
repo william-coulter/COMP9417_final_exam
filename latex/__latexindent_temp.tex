@@ -52,27 +52,116 @@
 
 % \newpage
 
-\section*{Question HERE}
+\section*{Question 4}
 
 \subsection*{a}
 
-% \includegraphics[scale=0.8]{NPBootstrap.png}
+Let \(D\) be a \(M \times n\in{0,1}\) binary matrix representing which observations were generated 
+from which Regression Model. For example the matrix:
+
+\[
+    \begin{matrix}
+        0 & 0 & 1\\
+        1 & 1 & 0
+    \end{matrix}
+\]
+
+Is a \(2 \times 3\) that represents a dataset of 3 observations belonging to one of 2 Regression Models. Observations
+1 and 2 belong to Regression Model 2 and observation 3 belongs to Regression Model 1.\\
+
+Let \(\hat{D}\) be the binary matrix of the above format labelling the predictions of Regression Models that each observation 
+belongs to.
 
 
-\newpage
+\[
+    loss(\hat{D}, \hat{\beta}) = \sum_{j=1}^{M}[
+        \sum_{i=1}^{n}[
+            \hat{D}_{ji} * 
+            [(X_{i}^{T} \hat{\beta_{j}} - Y_{i})^{2} + (1 - D_{ji})]
+    ]
+\]
+
+The first term \((X_{i}^{T} \hat{\beta_{j}} - Y_{i})^{2}\) is a penalty for having errors in \(\hat{\beta_{j}}\). The second term
+\(1 - D_{j,i}\) is a penalty for prediction observation \(i\) in the incorrect \(D_{j}\). Note that the observation is skipped and 
+no loss is applied if the observation does not belong to the predicted regression model, which is why the loss for each 
+observation is multipled by \(\hat{D}_{ji}\)\\
+
+In words, the loss function reads: For each observation \(i\) that is predicted to be in a regression model \(\hat{D}_{j}\), find the mean
+squared error of that observation and add a penalty if the observation's predicted \(\hat{D}\) differed from its actual \(D\).\\
+
+When \(M = 1\), this just simplifies down to:
+
+\[
+    loss(\hat{\beta}) = \sum_{i=1}^{n}(
+            (X_{i}^{T} \hat{\beta_{j}} - Y_{i})^{2}
+    )
+\]
 
 \subsection*{b}
 
-% \includegraphics[scale=0.8]{NPBootstrap.png}
+\begin{verbatim}
+    # First partition all observations
+    For each observation i:
+        For each model m:
+            -> calculate the absolute distance between the model (m) prediction
+               on this observation (i) and the actual value of this observation
 
-% Screenshot of code here: \ref{code:q1a}.\\
+        -> assign this observation to the model that it 
+           had the \emph{smallest} error with
 
+    # Next find the coefficients of each model
+    For each partitioned dataset d:
+        -> fit a linear regression model that uses MSE as its loss function
+           and has the dataset (d) as its training data
+
+    # We now have values for D and \(\hat{B}\) that are minimised and the loss
+    # can be calculated with my function in a.
+
+\end{verbatim}
+
+\subsection*{c}
+
+\includegraphics[scale=0.4]{q4c_code1.png}
+
+\includegraphics[scale=0.4]{q4c_code2.png}
+
+\subsection*{d}
+
+\includegraphics[scale=0.5]{q4d_code1.png}
+
+\newpage
+\subsection*{e}
+
+See code for this question here \ref{code:q4e}
+
+\begin{verbatim}
+    M  |        train        |        test          |
+    5  |  773.2139301322158  |  116.60294714118255  |
+    10 |  1226.975556530428  |  190.77503856677967  |
+    15 |  1854.7758161852978 |  374.3318184723467   |
+    20 |  5245.153194657786  |  924.8003322754047   |
+    25 |  3687.1371589765313 |  572.1619888958278   |
+    30 |  4150.443300036157  |  703.5325244593158   |
+\end{verbatim}
+
+\includegraphics[scale=0.8]{q4e.png}
+
+Based on the results, I would guess that the most reasonable 
+value for M is around 6 or 8. Even though the train losses 
+were lower when M < 5, the test losses were approximately 
+the same for M from 0 to 8 and a lower value for M would be favoured
+since each of the models gets trained on more data.
 
 \newpage
 \section*{Appendix}
 
-% \subsection{q1a}
-% \label{code:q1a}
-% \includegraphics[scale=0.4]{q1a.png}
+\subsection{q4e}
+\label{code:q4e}
+
+\includegraphics[scale=0.4]{q4e_code1.png}
+
+\includegraphics[scale=0.4]{q4e_code2.png}
+
+\includegraphics[scale=0.4]{q4e_code3.png}
 
 \end{document}

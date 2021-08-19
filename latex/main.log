@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  19 AUG 2021 09:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  19 AUG 2021 22:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1120,62 +1120,91 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 57.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 57.
-<../code/outputs//NPBootstrap.png, id=11, 462.528pt x 346.896pt>
-File: ../code/outputs//NPBootstrap.png Graphic file (type png)
-<use ../code/outputs//NPBootstrap.png>
-Package pdftex.def Info: ../code/outputs//NPBootstrap.png  used on input line 59.
-(pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 64.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 59.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 63--66
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
-LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 70.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--74
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
 
-[1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//NPBootstrap.png>] [2]
-<../code/outputs//q1a.png, id=32, 1080.035pt x 887.315pt>
-File: ../code/outputs//q1a.png Graphic file (type png)
-<use ../code/outputs//q1a.png>
-Package pdftex.def Info: ../code/outputs//q1a.png  used on input line 89.
-(pdftex.def)             Requested size: 432.00635pt x 354.91971pt.
- [3 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q1a.png>] (/Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 102.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+<../code/outputs//q4c_code1.png, id=11, 933.4875pt x 701.62125pt>
+File: ../code/outputs//q4c_code1.png Graphic file (type png)
+<use ../code/outputs//q4c_code1.png>
+Package pdftex.def Info: ../code/outputs//q4c_code1.png  used on input line 124.
+(pdftex.def)             Requested size: 373.38838pt x 280.64352pt.
+ [1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<../code/outputs//q4c_code2.png, id=30, 1031.855pt x 219.82124pt>
+File: ../code/outputs//q4c_code2.png Graphic file (type png)
+<use ../code/outputs//q4c_code2.png>
+Package pdftex.def Info: ../code/outputs//q4c_code2.png  used on input line 126.
+(pdftex.def)             Requested size: 412.73468pt x 87.92693pt.
+<../code/outputs//q4d_code1.png, id=31, 811.03pt x 894.34125pt>
+File: ../code/outputs//q4d_code1.png Graphic file (type png)
+<use ../code/outputs//q4d_code1.png>
+Package pdftex.def Info: ../code/outputs//q4d_code1.png  used on input line 130.
+(pdftex.def)             Requested size: 405.514pt x 447.16953pt.
+ [2 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q4c_code1.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q4c_code2.png>] [3 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q4d_code1.png>]
+<../code/outputs//q4e.png, id=46, 462.528pt x 346.896pt>
+File: ../code/outputs//q4e.png Graphic file (type png)
+<use ../code/outputs//q4e.png>
+Package pdftex.def Info: ../code/outputs//q4e.png  used on input line 147.
+(pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
+ [4 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q4e.png>]
+<../code/outputs//q4e_code1.png, id=53, 809.0225pt x 348.30125pt>
+File: ../code/outputs//q4e_code1.png Graphic file (type png)
+<use ../code/outputs//q4e_code1.png>
+Package pdftex.def Info: ../code/outputs//q4e_code1.png  used on input line 161.
+(pdftex.def)             Requested size: 323.60327pt x 139.31802pt.
+<../code/outputs//q4e_code2.png, id=54, 841.1425pt x 791.95876pt>
+File: ../code/outputs//q4e_code2.png Graphic file (type png)
+<use ../code/outputs//q4e_code2.png>
+Package pdftex.def Info: ../code/outputs//q4e_code2.png  used on input line 163.
+(pdftex.def)             Requested size: 336.45103pt x 316.7779pt.
+<../code/outputs//q4e_code3.png, id=55, 952.55875pt x 684.5575pt>
+File: ../code/outputs//q4e_code3.png Graphic file (type png)
+<use ../code/outputs//q4e_code3.png>
+Package pdftex.def Info: ../code/outputs//q4e_code3.png  used on input line 165.
+(pdftex.def)             Requested size: 381.01675pt x 273.81815pt.
+ [5 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q4e_code1.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q4e_code2.png>] [6 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q4e_code3.png>] (/Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FE77A0CE9B62047C92E43303E38076BB;63.
+(rerunfilecheck)             Checksum: 23E07AC79B094B5DF0EC0BEE8E5C165C;63.
  ) 
 Here is how much of TeX's memory you used:
- 25009 strings out of 478994
- 439339 string characters out of 5858184
- 737138 words of memory out of 5000000
- 42013 multiletter control sequences out of 15000+600000
- 444759 words of font info for 49 fonts, out of 8000000 for 9000
+ 25062 strings out of 478994
+ 440831 string characters out of 5858184
+ 747138 words of memory out of 5000000
+ 42053 multiletter control sequences out of 15000+600000
+ 438710 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,5n,141p,599b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch_rydp4l.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Italic.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (3 pages, 368271 bytes).
+ 138i,6n,141p,599b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch_rydp4l.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (6 pages, 687152 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 105 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

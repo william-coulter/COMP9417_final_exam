@@ -17,11 +17,6 @@ def import_data(dir):
 
 ### SOLUTIONS ###
 
-def q4b():
-    # Psuedo code for algorithm that minimises the loss function
-    # I really don't know...
-    pass
-
 def total_loss(X, y, Z, models):
     loss = 0
     M = len(models)
