@@ -56,37 +56,32 @@
 
 \subsection*{a}
 
-\includegraphics[scale=0.8]{NPBootstrap.png}
+\includegraphics[scale=0.3]{q2a_decision_tree.jpg}
 
-Screenshot of code here: \ref{code:q1a}.\\
+i.From the working here \ref{working:2a}, we can see that \(X_{1}\) has the largest gain when splitting the data and therefore
+should be the first branch. \(X_{2}\) and \(X_{3}\) both have 0 gain. For the next split at \(X_{1,1}\), both \(X_{2}\) and \(X_{3}\)
+produce the same gain which is \(gain(X_{1,1}, X_{2}) = gain(X_{1,1}, X_{3}) = 0.39317\) which is why it doesn't matter which one is selected.
+I chose \(X_{2}\) to be the next split and then finished the tree.\\
 
-i. C is a hyperparameter used for regularization to prevent overfitting of the Logistics Regression
-model. This is inversely proportional to the penalty constant \(\lambda\) and penalises
-models that have a lot of features and therefore the effect is that it reduces each feature importance.\\
+The training error for this tree is 0 since our tree uses every feature and there are no observations where the exact same
+values for each feature is given but it maps to a separate output.\\
 
-ii. The effect that this has on the Bootstrap graph is that it increases the variance of 
-each feature, therefore making the 90\% confidence intervals larger and less reliable. At \(C = 0.1\),
-most of the features have their average at 0 with a very small confidence interval. Because I know 
-how the data was generated and I know that the mean for each feature \emph{should} be 0, 
-I know that this is a reliable estimate. However in the real world when I don't know 
-how the data was generated, a model with \(C = 0.1\) would probably be overfit on the 
-data and not perform well on new inputs.\\
-
-\newpage
+ii. There is no depth 2 decision tree that has a lower training error than the one found with ID3.
+The training error is already the lowest it can be at 0. This tells us that ID3 can fit any dataset
+with no conflicting classifications and therefore has very high complexity. Without specifying the ID3 algorithm to 
+stop early and with a non-conflicting dataset, ID3 can always achieve 0 training error. 
 
 \subsection*{b}
-
-% \includegraphics[scale=0.8]{NPBootstrap.png}
-
-% Screenshot of code here: \ref{code:q1a}.\\
 
 
 \newpage
 \section*{Appendix}
 
-\subsection{q1a}
-\label{code:q1a}
-\includegraphics[scale=0.4]{q1a.png}
+\subsection{q2a}
+\label{working:2a}
+\includegraphics[scale=0.4]{q2a_working_1.jpg}
 
+\newpage
+\includegraphics[scale=0.4]{q2a_working_2.jpg}
 
 \end{document}

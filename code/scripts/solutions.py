@@ -10,107 +10,82 @@ from sklearn.metrics import log_loss, make_scorer
 import math
 import matplotlib.pyplot as plt
 import numpy as np
-
-Q1_DATA_DIR = "./data/Q1.csv"
+import itertools
 
 ### UTILS ###
 
 def import_data(dir):
     return read_csv(dir, index_col=0)
 
+def map_to_class(zero_or_one):
+    if int(zero_or_one[0]) == 0:
+        return -1
+    else:
+        return 1
+
 ### SOLUTIONS ###
 
-def q1a():
-    # Import data
-    data = import_data(Q1_DATA_DIR)
+# Code based off of NeuralLearning lab implementation
+def train_perceptron(X, y, eta=1):
+    w = np.zeros((len(X[0]), 1))           # init weight vector to 0s
+    nmb_iter = 0
+    MAX_ITER = 10000
 
-    Xtrain = data.iloc[:, :30].to_numpy()
-    Ytrain = data.Y.to_numpy()
+    for _ in range(MAX_ITER):               # termination condition (avoid running forever)
 
-    # Set random seed
-    np.random.seed(12)
+        nmb_iter += 1
 
-    # Set B and C and p
-    B = 500
-    C = 1000
-    p = Xtrain.shape[1]
+        # check which indices we make mistakes on, and pick one randomly to update
+        preds = X @ w
+        preds = list(map(map_to_class, preds.tolist()))
+        
+        mistake_idxs = []
+        for i, pred in enumerate(preds):
+            if pred != y[i][0]:
+                mistake_idxs.append(i)
 
-    # Find confidence
-    coef_mat = np.zeros(shape=(B,p))
-    for b in range(B):
-        b_sample = np.random.choice(np.arange(Xtrain.shape[0]), size=Xtrain.shape[0])
-        Xtrain_b = Xtrain[b_sample]
-        Ytrain_b = Ytrain[b_sample]
-        mod = LogisticRegression(penalty="l1", solver="liblinear", C=C).fit(Xtrain_b, Ytrain_b)
-        coef_mat[b,:] = mod.coef_
+        # mistake_idxs = np.where(yXw < 0)[0]
+        mistake_idxs = np.array(mistake_idxs)
+        if mistake_idxs.size > 0:
+            i = np.random.choice(mistake_idxs)        # pick idx randomly
+            w = w + eta * preds[i]                    # update
+            print(f"new vector w: {w}")
 
-    means = np.mean(coef_mat, axis=0)
-    lower = np.quantile(coef_mat, 0.10, axis=0)
-    upper = np.quantile(coef_mat, 0.90, axis=0)
+        else: # no mistake made
+            print(f"Converged after {nmb_iter} iterations")
+            return
 
-    colors = ["red" if lower[i] <= 0 and upper[i] >= 0 else "blue" for i in range(p)]
+    print(f"Did not converge after {MAX_ITER} iterations")
 
-    plt.vlines(x=np.arange(1,p+1), ymin=lower, ymax=upper, colors=colors)
-    plt.scatter(x=np.arange(1,p+1), y=means, color=colors)
-    plt.xlabel("$Features$")
-    plt.savefig("./outputs/NPBootstrap.png", dpi=400)
+# Generates the dataset for question 2b.
+#
+# Provide a list of tuples that contains all positive classes.
+# Returns a completed dataset mapping all vectors in the space to either
+# a positive or negative class. The dataset is returned as 2 lists being
+# the set of X vectors and their corresponding Y values.
+def generate_data_set(positive_classes):
+    # Assume all tuples are the same length
+    dimensions = len(positive_classes[0])
+    domain = list(itertools.product([0, 1], repeat=dimensions))
 
-def q1b():
-    # Import data
-    data = import_data(Q1_DATA_DIR)
+    # Loop over domain
+    Y = []
+    for vector in domain:
+        # If vector is in positive_classes, then mark as positive
+        if vector in positive_classes:
+            Y.append([1])
+        else:
+            Y.append([-1])
 
-    Xtrain = data.iloc[:, :30].to_numpy()
-    Ytrain = data.Y.to_numpy()
+    return np.array(domain), np.array(Y)
 
-    # Set random seed
-    np.random.seed(20)
+def q2b():
+    # i)
+    # positive_classes_i = [(0,1,0), (0,1,1), (1,0,0), (1,1,1)]
+    positive_classes_ii = [(0,0), (0,1)]
+    X, Y = generate_data_set(positive_classes_ii)
 
-    # Set B and C and p
-    B = 500
-    C = 1000
-    p = Xtrain.shape[1]
-
-    # Train initial model
-    mod = LogisticRegression(penalty="l1", solver="liblinear", C=C).fit(Xtrain, Ytrain)
-    B0 = mod.intercept_[0]
-    coefs_sum = sum(mod.coef_[0])
-    # print(B0)
-    # print(coefs_sum)
-    # print(math.exp(B0 + coefs_sum))
-    # print(mod.coef_[0])
-
-    # Calculate p value for bernoulli distribution
-    # TODO: Probability here is too high
-    prob = math.exp(B0 + coefs_sum) / (1 + math.exp(B0 + coefs_sum))
-    # print(prob)
-
-    # Find confidence
-    coef_mat = np.zeros(shape=(B,p))
-    for b in range(B):
-        # Get X values randomly as before. Here, n = Xtrain.shape[0].
-        b_sample = np.random.choice(np.arange(Xtrain.shape[0]), size=Xtrain.shape[0])
-        Xtrain_b = Xtrain[b_sample]
-
-        # The Ytrain_b must come from a bernoulli distribution
-        Ytrain_b = np.random.binomial(n=1, p=prob, size=Xtrain.shape[0])
-        print(Ytrain_b)
-
-        # Train new model
-        mod_b = LogisticRegression(penalty="l1", solver="liblinear", C=C).fit(Xtrain_b, Ytrain_b)
-
-        # store coefficients
-        coef_mat[b,:] = mod_b.coef_
-
-    means = np.mean(coef_mat, axis=0)
-    lower = np.quantile(coef_mat, 0.10, axis=0)
-    upper = np.quantile(coef_mat, 0.90, axis=0)
-
-    colors = ["red" if lower[i] <= 0 and upper[i] >= 0 else "blue" for i in range(p)]
-
-    plt.vlines(x=np.arange(1,p+1), ymin=lower, ymax=upper, colors=colors)
-    plt.scatter(x=np.arange(1,p+1), y=means, color=colors)
-    plt.xlabel("$Features$")
-    plt.savefig("./outputs/NPParameterisedBootstrap.png", dpi=400)
+    train_perceptron(X, Y, 1)
 
 ### MAIN ###
 
@@ -126,8 +101,7 @@ if __name__ == "__main__":
     args = command_line_parsing().parse_args()
 
     questions = {
-        "q1a": q1a,
-        "q1b": q1b
+        "q2b": q2b
     }
 
     # Execute the given command
