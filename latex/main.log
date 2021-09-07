@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  19 AUG 2021 23:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  8 SEP 2021 08:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1120,89 +1120,30 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 57.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 57.
-<../code/outputs//q2a_decision_tree.jpg, id=11, 722.7pt x 963.6pt>
+<../code/outputs//q2a_decision_tree.jpg, id=7, 722.7pt x 963.6pt>
 File: ../code/outputs//q2a_decision_tree.jpg Graphic file (type jpg)
 <use ../code/outputs//q2a_decision_tree.jpg>
 Package pdftex.def Info: ../code/outputs//q2a_decision_tree.jpg  used on input line 59.
 (pdftex.def)             Requested size: 216.81166pt x 289.08223pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 61.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 61--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--68
-
- []
-
-<../code/outputs//q2b_dataset.png, id=13, 775.89874pt x 394.47375pt>
-File: ../code/outputs//q2b_dataset.png Graphic file (type png)
-<use ../code/outputs//q2b_dataset.png>
-Package pdftex.def Info: ../code/outputs//q2b_dataset.png  used on input line 78.
-(pdftex.def)             Requested size: 310.354pt x 157.7867pt.
 [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q2a_decision_tree.jpg> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q2b_dataset.png>]
-<../code/outputs//q2b_perceptron.png, id=30, 1054.94125pt x 603.25375pt>
-File: ../code/outputs//q2b_perceptron.png Graphic file (type png)
-<use ../code/outputs//q2b_perceptron.png>
-Package pdftex.def Info: ../code/outputs//q2b_perceptron.png  used on input line 82.
-(pdftex.def)             Requested size: 421.96902pt x 241.29723pt.
-<../code/outputs//q2b_final.png, id=31, 1179.40625pt x 291.0875pt>
-File: ../code/outputs//q2b_final.png Graphic file (type png)
-<use ../code/outputs//q2b_final.png>
-Package pdftex.def Info: ../code/outputs//q2b_final.png  used on input line 86.
-(pdftex.def)             Requested size: 353.8246pt x 87.32692pt.
-LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 88.
-<../code/outputs//q2d_code1.png, id=32, 1007.765pt x 526.96875pt>
-File: ../code/outputs//q2d_code1.png Graphic file (type png)
-<use ../code/outputs//q2d_code1.png>
-Package pdftex.def Info: ../code/outputs//q2d_code1.png  used on input line 96.
-(pdftex.def)             Requested size: 403.09886pt x 210.78375pt.
-<../code/outputs//q2d_code2.png, id=33, 1043.9pt x 757.83125pt>
-File: ../code/outputs//q2d_code2.png Graphic file (type png)
-<use ../code/outputs//q2d_code2.png>
-Package pdftex.def Info: ../code/outputs//q2d_code2.png  used on input line 98.
-(pdftex.def)             Requested size: 417.5526pt x 303.12714pt.
- [2 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q2b_perceptron.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q2b_final.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q2d_code1.png>] [3 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q2d_code2.png>]
-<../code/outputs//q2a_working_1.jpg, id=47, 722.7pt x 963.6pt>
-File: ../code/outputs//q2a_working_1.jpg Graphic file (type jpg)
-<use ../code/outputs//q2a_working_1.jpg>
-Package pdftex.def Info: ../code/outputs//q2a_working_1.jpg  used on input line 105.
-(pdftex.def)             Requested size: 289.07487pt x 385.43317pt.
- [4 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q2a_working_1.jpg>]
-<../code/outputs//q2a_working_2.jpg, id=53, 722.7pt x 963.6pt>
-File: ../code/outputs//q2a_working_2.jpg Graphic file (type jpg)
-<use ../code/outputs//q2a_working_2.jpg>
-Package pdftex.def Info: ../code/outputs//q2a_working_2.jpg  used on input line 108.
-(pdftex.def)             Requested size: 289.07487pt x 385.43317pt.
- [5 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q2a_working_2.jpg>] (/Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux)
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q2a_decision_tree.jpg>] (/Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 13BD8C440B5E535C9B49D598F17BE589;63.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25048 strings out of 478994
- 440596 string characters out of 5858184
- 738138 words of memory out of 5000000
- 42043 multiletter control sequences out of 15000+600000
- 444812 words of font info for 49 fonts, out of 8000000 for 9000
+ 24947 strings out of 478994
+ 438281 string characters out of 5858184
+ 734104 words of memory out of 5000000
+ 41979 multiletter control sequences out of 15000+600000
+ 436086 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,6n,141p,599b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch_rydp4l.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (5 pages, 721333 bytes).
+ 138i,5n,141p,599b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch_rydp4l.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb>
+Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (1 page, 115664 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

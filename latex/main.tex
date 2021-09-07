@@ -27,7 +27,7 @@
 %	ASSIGNMENT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title{COMP9417: Homework Set \#2} % Title of the assignment
+\title{COMP9417: Supplementary Exam} % Title of the assignment
 
 \author{z5113817} % Author name and email address
 
@@ -57,54 +57,5 @@
 \subsection*{a}
 
 \includegraphics[scale=0.3]{q2a_decision_tree.jpg}
-
-i.From the working here \ref{working:2a}, we can see that \(X_{1}\) has the largest gain when splitting the data and therefore
-should be the first branch. \(X_{2}\) and \(X_{3}\) both have 0 gain. For the next split at \(X_{1,1}\), both \(X_{2}\) and \(X_{3}\)
-produce the same gain which is \(gain(X_{1,1}, X_{2}) = gain(X_{1,1}, X_{3}) = 0.39317\) which is why it doesn't matter which one is selected.
-I chose \(X_{2}\) to be the next split and then finished the tree.\\
-
-The training error for this tree is 0 since our tree uses every feature and there are no observations where the exact same
-values for each feature is given but it maps to a separate output.\\
-
-ii. There is no depth 2 decision tree that has a lower training error than the one found with ID3.
-The training error is already the lowest it can be at 0. This tells us that ID3 can fit any dataset
-with no conflicting classifications and therefore has very high complexity. Without specifying the ID3 algorithm to 
-stop early and with a non-conflicting dataset, ID3 can always achieve 0 training error. 
-
-\subsection*{b}
-
-I generated the data with the following code:
-
-\includegraphics[scale=0.4]{q2b_dataset.png}
-
-The perceptron is then trained with:
-
-\includegraphics[scale=0.4]{q2b_perceptron.png}
-
-The spaces were then tested with:
-
-\includegraphics[scale=0.3]{q2b_final.png}
-
-Note that this produces \textbf{non-linearly separable} for all spaces which I'm assuming is not correct.
-The issues is that the vector for \textbf{w} doesn't iterate in a direction that separates the data 
-better and keeps moving further and further away from the classifications.
-
-\subsection*{d}
-
-I had already started working on this before its removal. This is what I had:
-
-\includegraphics[scale=0.4]{q2d_code1.png}
-
-\includegraphics[scale=0.4]{q2d_code2.png}
-
-\newpage
-\section*{Appendix}
-
-\subsection{q2a}
-\label{working:2a}
-\includegraphics[scale=0.4]{q2a_working_1.jpg}
-
-\newpage
-\includegraphics[scale=0.4]{q2a_working_2.jpg}
 
 \end{document}

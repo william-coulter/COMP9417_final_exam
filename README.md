@@ -1,3 +1,1 @@
-# COMP9417 Homework 2
-
-Repository for Homework set 2
+# COMP9417 Final Exam
