@@ -21,7 +21,7 @@ def plot_perceptron(ax, X, y, w, v=None):
     ax.scatter(pos_points[:, 1], pos_points[:, 2], color='blue')
     ax.scatter(neg_points[:, 1], neg_points[:, 2], color='red')
 
-    xx = np.linspace(-1.5,0)
+    xx = np.linspace(-6,6)
     yy = -w[0]/w[2] - w[1]/w[2] * xx
     ax.plot(xx, yy, color='orange')
 
@@ -29,7 +29,7 @@ def plot_perceptron(ax, X, y, w, v=None):
     xpt = (-1*w[0] / w[2]) * 1/ratio
     ypt = (-1*w[0] / w[1]) * 1/ratio
 
-    ax.arrow(xpt, ypt, w[1], w[2], head_width=0.2, color='orange')
+    ax.arrow(xpt, ypt, w[1], w[2], head_width=0.2, color='purple')
     ax.axis('equal')
 
     # For some of the winnow algorithms
@@ -350,8 +350,9 @@ def q3d():
 
     # Plot
     fig, ax = plt.subplots()
-    plot_perceptron(ax, X, y, u+v)
-    ax.set_title(f"u+v={u+v}\niterations={nmb_iter}")
+    plot_perceptron(ax, X, y, u-v)
+    print(f"u={u}\nv={v}")
+    ax.set_title(f"u-v={u-v}\niterations={nmb_iter}")
     plt.xlim([-0.5,1.5])
     plt.ylim([-1,2])
     plt.savefig("outputs/Q3d.png", dpi=500)
@@ -366,8 +367,9 @@ def q3e():
 
     # Plot
     fig, ax = plt.subplots()
-    plot_perceptron(ax, X, y, u+v)
-    ax.set_title(f"u+v={u+v}\niterations={nmb_iter}")
+    plot_perceptron(ax, X, y, u-v)
+    print(f"u={u}\nv={v}")
+    ax.set_title(f"u-v={u-v}\niterations={nmb_iter}")
     plt.xlim([-0.5,1.5])
     plt.ylim([-1,2])
     plt.savefig("outputs/Q3e.png", dpi=500)
