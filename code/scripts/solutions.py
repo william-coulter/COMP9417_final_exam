@@ -20,7 +20,7 @@ def plot_perceptron(ax, X, y, w):
     neg_points = X[np.where(y==-1)[0]]
     ax.scatter(pos_points[:, 1], pos_points[:, 2], color='blue')
     ax.scatter(neg_points[:, 1], neg_points[:, 2], color='red')
-    xx = np.linspace(-6,6)
+    xx = np.linspace(-1,1)
     yy = -w[0]/w[2] - w[1]/w[2] * xx
     ax.plot(xx, yy, color='orange')
 
@@ -34,26 +34,39 @@ def plot_perceptron(ax, X, y, w):
 
 ### SOLUTIONS ###
 
-def perceptron(X, y, max_iter=100):
-    np.random.seed(1)
+def train_perceptron(X, y, max_iter=100):
+    # Psuedo code following:
+    # 
+    # input: (x1, y1), ... ,(xn, yn)
+    # initialise: w(0) = (0, 0, ... , 0) ∈ R
+    # for t = 1, ... , max iter :
+    #   if there is an index i such that y (w(t), x) <= 0
+    #       update w
+    #       t = t + 1
+    #   else:
+    #       output w(t), t
 
-    # Initialise w vectors
+    np.random.seed(2)
+
+    # Initialise w vector (1 for each iteration)
     nfeatures = X.shape[1]
     w = np.zeros((max_iter, nfeatures))
     w[0] = np.zeros(nfeatures)
 
     # Iterate and adjust w
-    for t in range(max_iter):
-
+    for t in range(max_iter - 1):
+        
+        # Dot product multipled by y
         yXw = y * (X @ w[t].T)
         mistake_idxs = np.where(yXw <= 0)[0]
 
         # If there are mistakes, choose a random one and 
         # update accordingly
         if mistake_idxs.size > 0:
+            print(f"Mistake found at iteration {t + 1}")
+            
             i = np.random.choice(mistake_idxs)
-            w = w + y[i] * X[i]
-            w[i + 1] = w[i] + y[i] * X[i]
+            w[t + 1] = w[t] + y[i] * X[i]
 
         else:
             return w[t], t + 1
@@ -67,13 +80,13 @@ def q3b():
     y = import_data(Q3Y_DIR)
 
     # create perceptron
-    w, nmb_iter = perceptron(X,y)
+    w, nmb_iter = train_perceptron(X,y)
 
     # Plot
     fig, ax = plt.subplots()
     plot_perceptron(ax, X, y, w)
     ax.set_title(f"w={w}, iterations={nmb_iter}")
-    plt.savefig("outputs/Q3b.png", dpi=300)
+    plt.savefig("outputs/Q3b.png", dpi=500)
 
 ### MAIN ###
 
