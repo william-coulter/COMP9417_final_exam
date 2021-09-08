@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  8 SEP 2021 22:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  8 SEP 2021 22:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1145,12 +1145,17 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 180--185
+Underfull \hbox (badness 10000) in paragraph at lines 176--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--190
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--190
 
  []
 
@@ -1165,44 +1170,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--198
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--202
+Underfull \hbox (badness 10000) in paragraph at lines 211--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--218
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--231
+Underfull \hbox (badness 10000) in paragraph at lines 215--227
 
  []
 
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 232.
+(Font)              scaled to size 10.0pt on input line 228.
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 240--245
+Underfull \hbox (badness 10000) in paragraph at lines 236--241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--255
+Underfull \hbox (badness 10000) in paragraph at lines 247--251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
+Underfull \hbox (badness 10000) in paragraph at lines 252--254
 
  []
 
 
-Overfull \hbox (0.37175pt too wide) in paragraph at lines 259--263
+Overfull \hbox (0.37175pt too wide) in paragraph at lines 255--259
 \T1/XCharter-TLF/m/n/10 This is a ra-tio of the \T1/XCharter-TLF/m/it/10 pre-ci-sion \T1/XCharter-TLF/m/n/10 of the model and the \T1/XCharter-TLF/m/it/10 re-call \T1/XCharter-TLF/m/n/10 and is math-e-mat-i-cally de-noted as $[]$.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--263
+Underfull \hbox (badness 10000) in paragraph at lines 255--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--269
 
  []
 
@@ -1212,64 +1217,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 270--273
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--277
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 285--287
+Underfull \hbox (badness 10000) in paragraph at lines 281--283
 
  []
 
 [5]
-<../code/outputs//Q3b.png, id=67, 462.528pt x 346.896pt>
+<../code/outputs//Q3b.png, id=65, 462.528pt x 346.896pt>
 File: ../code/outputs//Q3b.png Graphic file (type png)
 <use ../code/outputs//Q3b.png>
-Package pdftex.def Info: ../code/outputs//Q3b.png  used on input line 298.
+Package pdftex.def Info: ../code/outputs//Q3b.png  used on input line 294.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
-<../code/outputs//code:Q3b.png, id=69, 707.64375pt x 631.35875pt>
+<../code/outputs//code:Q3b.png, id=67, 707.64375pt x 631.35875pt>
 File: ../code/outputs//code:Q3b.png Graphic file (type png)
 <use ../code/outputs//code:Q3b.png>
-Package pdftex.def Info: ../code/outputs//code:Q3b.png  used on input line 302.
+Package pdftex.def Info: ../code/outputs//code:Q3b.png  used on input line 298.
 (pdftex.def)             Requested size: 353.82101pt x 315.6786pt.
  [6 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//Q3b.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:Q3b.png>]
-<../code/outputs//psuedo:code:q3c.png, id=77, 986.68625pt x 654.445pt>
+<../code/outputs//psuedo:code:q3c.png, id=75, 986.68625pt x 654.445pt>
 File: ../code/outputs//psuedo:code:q3c.png Graphic file (type png)
 <use ../code/outputs//psuedo:code:q3c.png>
-Package pdftex.def Info: ../code/outputs//psuedo:code:q3c.png  used on input line 309.
-(pdftex.def)             Requested size: 444.00471pt x 294.49753pt.
-
-Overfull \hbox (3.7606pt too wide) in paragraph at lines 309--310
-[][] 
- []
-
-<../code/outputs//q3c.png, id=78, 462.528pt x 346.896pt>
+Package pdftex.def Info: ../code/outputs//psuedo:code:q3c.png  used on input line 305.
+(pdftex.def)             Requested size: 424.26682pt x 281.40587pt.
+<../code/outputs//q3c.png, id=76, 462.528pt x 346.896pt>
 File: ../code/outputs//q3c.png Graphic file (type png)
 <use ../code/outputs//q3c.png>
-Package pdftex.def Info: ../code/outputs//q3c.png  used on input line 314.
+Package pdftex.def Info: ../code/outputs//q3c.png  used on input line 310.
 (pdftex.def)             Requested size: 416.27133pt x 312.2035pt.
-<../code/outputs//code:q3c.png, id=79, 726.715pt x 885.3075pt>
+<../code/outputs//code:q3c.png, id=77, 726.715pt x 885.3075pt>
 File: ../code/outputs//code:q3c.png Graphic file (type png)
 <use ../code/outputs//code:q3c.png>
-Package pdftex.def Info: ../code/outputs//code:q3c.png  used on input line 316.
+Package pdftex.def Info: ../code/outputs//code:q3c.png  used on input line 312.
 (pdftex.def)             Requested size: 363.3566pt x 442.65266pt.
-[7 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//psuedo:code:q3c.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q3c.png>] [8 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:q3c.png>] [9] (/Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux)
+ [7 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//psuedo:code:q3c.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q3c.png>] [8 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:q3c.png>]
+<../code/outputs//psuedo:code:q3d.png, id=91, 1092.08pt x 636.3775pt>
+File: ../code/outputs//psuedo:code:q3d.png Graphic file (type png)
+<use ../code/outputs//psuedo:code:q3d.png>
+Package pdftex.def Info: ../code/outputs//psuedo:code:q3d.png  used on input line 317.
+(pdftex.def)             Requested size: 436.82426pt x 254.5465pt.
+<../code/outputs//q3d.png, id=92, 462.528pt x 346.896pt>
+File: ../code/outputs//q3d.png Graphic file (type png)
+<use ../code/outputs//q3d.png>
+Package pdftex.def Info: ../code/outputs//q3d.png  used on input line 319.
+(pdftex.def)             Requested size: 416.27133pt x 312.2035pt.
+<../code/outputs//code:q3d.png, id=93, 763.85374pt x 909.3975pt>
+File: ../code/outputs//code:q3d.png Graphic file (type png)
+<use ../code/outputs//code:q3d.png>
+Package pdftex.def Info: ../code/outputs//code:q3d.png  used on input line 321.
+(pdftex.def)             Requested size: 305.53607pt x 363.75256pt.
+ [9 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//psuedo:code:q3d.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q3d.png>]
+<../code/outputs//psuedo:code:q3e.png, id=101, 1071.00125pt x 678.535pt>
+File: ../code/outputs//psuedo:code:q3e.png Graphic file (type png)
+<use ../code/outputs//psuedo:code:q3e.png>
+Package pdftex.def Info: ../code/outputs//psuedo:code:q3e.png  used on input line 325.
+(pdftex.def)             Requested size: 428.39291pt x 271.40918pt.
+<../code/outputs//q3e.png, id=102, 462.528pt x 346.896pt>
+File: ../code/outputs//q3e.png Graphic file (type png)
+<use ../code/outputs//q3e.png>
+Package pdftex.def Info: ../code/outputs//q3e.png  used on input line 327.
+(pdftex.def)             Requested size: 416.27133pt x 312.2035pt.
+ [10 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:q3d.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//psuedo:code:q3e.png>]
+<../code/outputs//code:q3e.png, id=110, 777.90625pt x 913.4125pt>
+File: ../code/outputs//code:q3e.png Graphic file (type png)
+<use ../code/outputs//code:q3e.png>
+Package pdftex.def Info: ../code/outputs//code:q3e.png  used on input line 329.
+(pdftex.def)             Requested size: 311.15698pt x 365.35854pt.
+ [11 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q3e.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:q3e.png>] [12] (/Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25079 strings out of 478994
- 440843 string characters out of 5858184
- 749964 words of memory out of 5000000
- 42043 multiletter control sequences out of 15000+600000
+ 25116 strings out of 478994
+ 441922 string characters out of 5858184
+ 749966 words of memory out of 5000000
+ 42073 multiletter control sequences out of 15000+600000
  451897 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,8n,141p,599b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch_rydp4l.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch1_co4ru4.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Italic.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (9 pages, 739522 bytes).
+Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (12 pages, 1388437 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 178 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 

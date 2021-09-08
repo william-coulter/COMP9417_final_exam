@@ -129,10 +129,6 @@ Substitute in the values to yield:
 
 Therefore at least 7,099 data points are needed to ensure the version space is \(\epsilon-exhausted\) with 0.9 probability.
 
-\subsubsection*{iii}
-
-\subsection*{f}
-
 \newpage
 \section*{Question 2}
 
@@ -306,7 +302,7 @@ Code screenshot:
 
 Pseudo code to implement \emph{Positive Winnow} algorithm:
 
-\includegraphics[scale=0.45]{psuedo:code:q3c.png}
+\includegraphics[scale=0.43]{psuedo:code:q3c.png}
 
 Note that I am using \(t\) as the \(w\) vector iteration number and \(i\) as the observation that the mistake
 occurred at. This is the other way around in the provided paper.
@@ -318,7 +314,19 @@ occurred at. This is the other way around in the provided paper.
 \newpage
 \subsection*{d}
 
+\includegraphics[scale=0.4]{psuedo:code:q3d.png}
+
+\includegraphics[scale=0.9]{q3d.png}
+
+\includegraphics[scale=0.4]{code:q3d.png}
+
 \subsection*{e}
+
+\includegraphics[scale=0.4]{psuedo:code:q3e.png}
+
+\includegraphics[scale=0.9]{q3e.png}
+
+\includegraphics[scale=0.4]{code:q3e.png}
 
 The balanced and modified Winnow algorithms have 2 main differences. The first is
 how the algorithms consider a mistake. The Balanced Winnow will consider an incoming 
@@ -331,7 +339,5 @@ The second is how the vectors update when a mistake occurs. In the Modified Winn
 depends on the particular feature weight of the incoming example (\(x_{t}^{j}\)), rather than 
 correcting by a constant (\(\alpha\) or \(\beta\)). This makes the corrections
 in the Modified Winnow more aggressive.
-
-
 
 \end{document}

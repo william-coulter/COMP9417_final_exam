@@ -23,7 +23,7 @@ def plot_perceptron(ax, X, y, w, v=None):
 
     xx = np.linspace(-1.5,0)
     yy = -w[0]/w[2] - w[1]/w[2] * xx
-    # ax.plot(xx, yy, color='orange')
+    ax.plot(xx, yy, color='orange')
 
     ratio = (w[2]/w[1] + w[1]/w[2])
     xpt = (-1*w[0] / w[2]) * 1/ratio
