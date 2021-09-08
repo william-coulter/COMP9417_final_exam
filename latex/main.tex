@@ -51,7 +51,7 @@
 
 \subsection*{a}
 
-% \includegraphics[scale=0.3]{q2a_decision_tree.jpg}
+
 
 \subsection*{b}
 
@@ -136,21 +136,11 @@ Therefore at least 7,099 data points are needed to ensure the version space is \
 
 \subsubsection*{Overview}
 
-% TODO NEED: positive winnow, balanced winnow, modified balanced winnow.
-
 Online machine learning methods are ones that are exposed to new data over time and adjust the model as this happens.
 The paper looks at online learning methods and how they compare to more traditional batch learners. Typically, online
 learning methods are faster and have smaller memory footprints than batch learners. The trade-off is that online
 learners can be less accurate than batch learners on one pass over the data, and so often require multiple passes to achieve a similar 
 accuracy.\\
-
-% The paper has four main sections:
-% \begin{enumerate}
-%     \item Online Learning Methods
-%     \item Voting
-%     \item Experiments
-%     \item Online Feature Selection
-% \end{enumerate}
 
 \subsubsection*{Online Learning Methods}
 
@@ -261,6 +251,31 @@ specifically when the number of selected features was relatively large. This res
 in the MBW learner.
 
 \subsection*{b}
+
+Plot of final converged \(w\) vector amongst the dataset
+
+\includegraphics[scale=0.7]{Q3b.png}
+
+Code screenshot: 
+
+\includegraphics[scale=0.5]{code:Q3b.png}
+
+\newpage
+\subsection*{c}
+
+Pseudo code to implement \emph{Positive Winnow} algorithm:
+
+\includegraphics[scale=0.45]{psuedo:code:q3c.png}
+
+Note that I am using \(t\) as the \(w\) vector iteration number and \(i\) as the observation that the mistake
+occurred at. This is the other way around in the provided paper.
+
+\includegraphics[scale=0.9]{q3c.png}
+
+\includegraphics[scale=0.5]{code:q3c.png}
+
+\newpage
+\subsection*{d}
 
 
 
