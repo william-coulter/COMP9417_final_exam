@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  8 SEP 2021 13:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  8 SEP 2021 17:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1138,23 +1138,100 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 10.0pt on input line 69.
 [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (/Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux)
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 141--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--167
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--171
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--200
+
+ []
+
+LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 201.
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 209--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--227
+
+ []
+
+
+Overfull \hbox (0.37175pt too wide) in paragraph at lines 228--232
+\T1/XCharter-TLF/m/n/10 This is a ra-tio of the \T1/XCharter-TLF/m/it/10 pre-ci-sion \T1/XCharter-TLF/m/n/10 of the model and the \T1/XCharter-TLF/m/it/10 re-call \T1/XCharter-TLF/m/n/10 and is math-e-mat-i-cally de-noted as $[]$.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--242
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--256
+
+ []
+
+[4] [5] (/Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24993 strings out of 478994
- 438961 string characters out of 5858184
- 745964 words of memory out of 5000000
- 41995 multiletter control sequences out of 15000+600000
- 444812 words of font info for 49 fonts, out of 8000000 for 9000
+ 25007 strings out of 478994
+ 439140 string characters out of 5858184
+ 749964 words of memory out of 5000000
+ 41996 multiletter control sequences out of 15000+600000
+ 451174 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,5n,141p,599b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch_rydp4l.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (2 pages, 181717 bytes).
+ 138i,8n,141p,599b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch_rydp4l.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Italic.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (5 pages, 262127 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
+ 111 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
+ 27 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

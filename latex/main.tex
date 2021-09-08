@@ -129,6 +129,139 @@ Therefore at least 7,099 data points are needed to ensure the version space is \
 
 \subsection*{f}
 
+\newpage
+\section*{Question 3}
+
+\subsection*{a}
+
+\subsubsection*{Overview}
+
+% TODO NEED: positive winnow, balanced winnow, modified balanced winnow.
+
+Online machine learning methods are ones that are exposed to new data over time and adjust the model as this happens.
+The paper looks at online learning methods and how they compare to more traditional batch learners. Typically, online
+learning methods are faster and have smaller memory footprints than batch learners. The trade-off is that online
+learners can be less accurate than batch learners on one pass over the data, and so often require multiple passes to achieve a similar 
+accuracy.\\
+
+% The paper has four main sections:
+% \begin{enumerate}
+%     \item Online Learning Methods
+%     \item Voting
+%     \item Experiments
+%     \item Online Feature Selection
+% \end{enumerate}
+
+\subsubsection*{Online Learning Methods}
+
+The fact that online learning methods are faster and more memory efficient means that they are more scalable. They can also
+easily be converted into a batch algorithm.\\
+
+The general format of a mistake-driven online learning algorithm is to receive a new binary observation \(X_{i} \in \mathbb{R}^{j}\) (i.e with \(j\) features) 
+with some corresponding real value \(y_{i} \in \{-1,1\}\). A prediction is then made using the current model and \(X_{i}\) and compared with its actual 
+value. If a mistake is made on the observation, then the model is updated.\\
+
+The paper looks at existing mistake-driven online learning algorithms such as the Perceptron, Relaxed Online Maximum Margin Algorithm 
+(ROMMA) and Passive-Aggressive and introduces their algorithm which is the basis for the Winnow algorithms. The paper then looks at 3 
+algorithms based off of the Winnow concept which are Positive Winnow, Balanced Winnow and Modified Balanced Winnow.\\
+
+For each of the Winnow algorithms, there is an assumption that each observation \(x_{t}\) is a vector of positive weights which is usually satisfied
+in NLP tasks where the \(x_{t}^{j}\) is related to the frequency of a term. Incoming data is augmented such that the \((m+1)^{th}\) feature is set to 
+1. The data is also normalised across all features if that feature occurs in the current model (\(w_{i}\)).\\
+
+Each Winnow algorithm has a promotion parameter \(\alpha > 1\), a demotion parameter \(0 < \beta < 1\) and a threshold parameter \(\theta_{th} > 0\).
+The Positive Winnow algorithm follows very similarly to the Perceptron however its decision function (definition of a mistake) is given by
+\(f = sign(\langle x_{t}, w_{i} \rangle - \theta_{th})\). Additionally, the update rule on vector \(w_{t}\) is different: 
+for all \(j\) where \(x_{t}^{j} > 0\)
+
+\[ w_{i+1}^{j} =
+    \begin{cases} 
+        w_{i}^{j} * \alpha & y_{t} > 0 \\
+        w_{i}^{j} * \beta & y_{t} < 0
+     \end{cases}
+\]
+
+The Balanced Winnow is a further modification on the Positive Winnow. The \(w_{t}\) vector is now a combination of a positive model \(u_{t}\) and
+a negative model \(v_{t}\) where each vector is initialised with all positive values and negative values respectively. The decision function then becomes 
+\(f = sign(\langle x_{t}, u_{i} \rangle - \langle x_{t}, v_{i} \rangle - \theta_{th})\) and the update rule for both vectors is:\\
+
+For all \(j\) in \(x_{t}\): \( 
+    u_{i+1}^{j} =
+    \begin{cases} 
+        u_{i}^{j} * \alpha & y_{t} > 0 \\
+        u_{i}^{j} * \beta & y_{t} < 0
+    \end{cases}
+\)    and     \(
+    v_{i+1}^{j} = \begin{cases} 
+        u_{i}^{j} * \beta & y_{t} > 0 \\
+        u_{i}^{j} * \alpha & y_{t} < 0
+     \end{cases}
+\)\\
+
+The paper then proposes a new \emph{Modified Balanced Winnow} algorithm which builds on the Balanced Winnow algorithm bu including a \emph{margin} \(M \geq 0\). A prediction is considered 
+a mistake not online when \(y_{t}\) is different from \(\hat{y}_{t}\), but also when the score function multiplied by \(y_{t}\) is smaller
+than the margin. As an equation, this is \(y_{t}*(\langle x_{t}, u_{i} \rangle - \langle x_{t}, v_{i} \rangle - \theta_{th}) \leq M\).
+There is also a small change to the update rule which can be referred to in the paper.
+
+\newpage
+\subsubsection*{Voting}
+
+This section of the paper talks about averaging or \emph{voting} to decide which hypothesis to use so far. 
+In mistake-driven learning, each time a new piece of data arrives that the model predicts incorrectly, the model is updated and the latest
+hypothesis is used. With voting, rather than using the latest hypothesis, a hypothesis is yielded by averaging intermediary 
+hypotheses which are weighted by the number of correct predictions each hypothesis made in its learning process. The motivation for this is that
+a voted hypothesis is less likely to be over-fit to the data.\\
+
+Mathematically, the average model \(w_{a}\) is denoted as \(w_{a} = \frac{1}{Z}\sum_{i}(w_{i}*c_{i})\). A voted algorithm is prefixed with 
+a \emph{v-} for example v-ROMMA or v-Winnow means the voted versions of ROMMA and Winnow respectively.
+
+\subsubsection*{Experiments}
+
+This section is an attempt to evaluate the algorithms discussed in the \emph{Online Learning Methods} section. The algorithms
+selected were Passive-Aggressive, Positive Winnow, Balanced Winnow and Modified Balanced Winnow. Batch algorithms such as the linear SVM
+and Naive Bayes were also selected to be compared to. The hyper-parameters used in each of the models can be found in Table 3
+of the paper.\\
+
+Various datasets were chosen. Some of the datasets were NLP based (came from a text-based input and tokenised) and others were non-NLP datasets. 
+The feature count and length of each dataset can be found in section 4.1 of the paper.\\
+
+For evaluation, the F1 score or harmonic precision-recall mean was used as a metric for each model. This is a ratio of 
+the \emph{precision} of the model and the \emph{recall} and is mathematically denoted as \(\frac{2*Precision*Recall}{Recall+Precision}\). 
+Each of the above models were trained on each the datasets with 5-fold cross-validation and the F1 mean was recorded. A voted version for each 
+of the models was also trained on the datasets. The results are included in Tables 4 and 5 of the paper.\\
+
+The key findings from the results was that across all 8 NLP datasets, MBW had the highest median F1 mean even when compared with the batch learners SVM and Naive Bayes.
+On non-NLP datasets however, MBW had the lowest median F1 mean. The effect of voting on the online learners only seemed to improve their performance 
+with non-NLP datasets and had little effect on NLP datasets.
+
+\subsubsection*{Online Feature Selection}
+
+Feature selection is when there is a dataset with a large number of features and rather then training on all of the features, only a 
+subset of "important" features are selected. This improves training and testing times, reduces memory requirements and in some cases 
+can improve prediction accuracy.\\
+
+Feature selection in batch methods is a well-known task. Each feature is ranked in terms of its "strength" of being a predictor 
+(Gain or Chi-Square) and the most important features are selected. With online learning methods, this selection can be expensive 
+as the strength of each feature needs to be re-calculated with each new example.\\
+
+The paper proposes a method of feature selection for its Modified Balanced Winnow algorithm that it calls \emph{Extremal Feature Selection} (EFS).
+This uses the two weight vectors \(u_{t}^{j}\) and \(v_{t}^{j}\) for feature \(j\) and calculates its importance score \(I\)at iteration \(t\) with:
+
+\[
+    I_{t}^{j} = |u_{t}^{j} - v_{t}^{j}|
+\]
+
+Higher values of \(I\) are associated with important features and low values of \(I\) with unimportant features. In fact, in the \emph{20newsgroup} dataset,
+the features with low importance scores were stop words such as "as, you, what, they, are, the".\\
+
+Preliminary experiments showed however that not only do the most important features play a role when improving accuracy, but so does the least 
+important features. For example, when choosing 100 features from a dataset, EFS would select 90\% of the features from the extreme top \(T\)
+and 10\% of the features from the extreme bottom \(B\). Such a model would out-perform other models that selected 100\% of its feature from \(T\)
+specifically when the number of selected features was relatively large. This result is speculated to be explained by the smoothing-like effect
+in the MBW learner.
+
+\subsection*{b}
+
 
 
 \end{document}
