@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  8 SEP 2021 22:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.10)  8 SEP 2021 23:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1120,184 +1120,242 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 52.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 52.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 54.
+<../code/outputs//q1a-i-1.jpg, id=7, 3011.25pt x 4015.0pt>
+File: ../code/outputs//q1a-i-1.jpg Graphic file (type jpg)
+<use ../code/outputs//q1a-i-1.jpg>
+Package pdftex.def Info: ../code/outputs//q1a-i-1.jpg  used on input line 55.
+(pdftex.def)             Requested size: 421.57213pt x 562.09618pt.
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q1a-i-1.jpg>]
+<../code/outputs//q1a-i-2.jpg, id=18, 4015.0pt x 3011.25pt>
+File: ../code/outputs//q1a-i-2.jpg Graphic file (type jpg)
+<use ../code/outputs//q1a-i-2.jpg>
+Package pdftex.def Info: ../code/outputs//q1a-i-2.jpg  used on input line 57.
+(pdftex.def)             Requested size: 401.52353pt x 301.14264pt.
+ [2 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q1a-i-2.jpg>]
+<../code/outputs//q1a-ii-1.jpg, id=23, 3011.25pt x 4015.0pt>
+File: ../code/outputs//q1a-ii-1.jpg Graphic file (type jpg)
+<use ../code/outputs//q1a-ii-1.jpg>
+Package pdftex.def Info: ../code/outputs//q1a-ii-1.jpg  used on input line 61.
+(pdftex.def)             Requested size: 421.57213pt x 562.09618pt.
+ [3 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q1a-ii-1.jpg>]
+<../code/outputs//q1a-ii-2.jpg, id=29, 4015.0pt x 3011.25pt>
+File: ../code/outputs//q1a-ii-2.jpg Graphic file (type jpg)
+<use ../code/outputs//q1a-ii-2.jpg>
+Package pdftex.def Info: ../code/outputs//q1a-ii-2.jpg  used on input line 63.
+(pdftex.def)             Requested size: 401.52353pt x 301.14264pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 58.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 67.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 58--62
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+XCharter-TLF on input line 65.
+LaTeX Font Info:    Trying to load font information for TS1+XCharter-TLF on input line 74.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/xcharter/TS1XCharter-TLF.fd
 File: TS1XCharter-TLF.fd 2020/05/25 (msharpe) Font definitions for TS1/XCharter-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 65.
-LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 65.
- [1
-
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 176--181
+(Font)              scaled to size 10.0pt on input line 74.
+ [4 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q1a-ii-2.jpg>]
+<../code/outputs//q1f-i-1.jpg, id=42, 3011.25pt x 4015.0pt>
+File: ../code/outputs//q1f-i-1.jpg Graphic file (type jpg)
+<use ../code/outputs//q1f-i-1.jpg>
+Package pdftex.def Info: ../code/outputs//q1f-i-1.jpg  used on input line 144.
+(pdftex.def)             Requested size: 421.57213pt x 562.09618pt.
+ [5] [6 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q1f-i-1.jpg>]
+<../code/outputs//q1f-i-2.jpg, id=63, 3011.25pt x 4015.0pt>
+File: ../code/outputs//q1f-i-2.jpg Graphic file (type jpg)
+<use ../code/outputs//q1f-i-2.jpg>
+Package pdftex.def Info: ../code/outputs//q1f-i-2.jpg  used on input line 146.
+(pdftex.def)             Requested size: 421.57213pt x 562.09618pt.
+ [7 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q1f-i-2.jpg>]
+<../code/outputs//q1f-i-3.jpg, id=69, 3011.25pt x 4015.0pt>
+File: ../code/outputs//q1f-i-3.jpg Graphic file (type jpg)
+<use ../code/outputs//q1f-i-3.jpg>
+Package pdftex.def Info: ../code/outputs//q1f-i-3.jpg  used on input line 148.
+(pdftex.def)             Requested size: 421.57213pt x 562.09618pt.
+ [8 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q1f-i-3.jpg>]
+<../code/outputs//q1f-i-4.jpg, id=74, 4015.0pt x 3011.25pt>
+File: ../code/outputs//q1f-i-4.jpg Graphic file (type jpg)
+<use ../code/outputs//q1f-i-4.jpg>
+Package pdftex.def Info: ../code/outputs//q1f-i-4.jpg  used on input line 150.
+(pdftex.def)             Requested size: 401.52353pt x 301.14264pt.
+<../code/outputs//q1f-ii-1.jpg, id=75, 4015.0pt x 3011.25pt>
+File: ../code/outputs//q1f-ii-1.jpg Graphic file (type jpg)
+<use ../code/outputs//q1f-ii-1.jpg>
+Package pdftex.def Info: ../code/outputs//q1f-ii-1.jpg  used on input line 153.
+(pdftex.def)             Requested size: 401.52353pt x 301.14264pt.
+ [9 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q1f-i-4.jpg> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q1f-ii-1.jpg>]
+<../code/outputs//q2a-i-1.jpg, id=81, 3011.25pt x 4015.0pt>
+File: ../code/outputs//q2a-i-1.jpg Graphic file (type jpg)
+<use ../code/outputs//q2a-i-1.jpg>
+Package pdftex.def Info: ../code/outputs//q2a-i-1.jpg  used on input line 160.
+(pdftex.def)             Requested size: 421.57213pt x 562.09618pt.
+ [10 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q2a-i-1.jpg>] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 201--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--190
+Underfull \hbox (badness 10000) in paragraph at lines 212--215
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--194
+Underfull \hbox (badness 10000) in paragraph at lines 216--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--198
+Underfull \hbox (badness 10000) in paragraph at lines 220--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--214
+Underfull \hbox (badness 10000) in paragraph at lines 236--239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--227
+Underfull \hbox (badness 10000) in paragraph at lines 240--252
 
  []
 
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 228.
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 236--241
+(Font)              scaled to size 10.0pt on input line 253.
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 261--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--251
+Underfull \hbox (badness 10000) in paragraph at lines 272--276
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
+Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
 
-Overfull \hbox (0.37175pt too wide) in paragraph at lines 255--259
+Overfull \hbox (0.37175pt too wide) in paragraph at lines 280--284
 \T1/XCharter-TLF/m/n/10 This is a ra-tio of the \T1/XCharter-TLF/m/it/10 pre-ci-sion \T1/XCharter-TLF/m/n/10 of the model and the \T1/XCharter-TLF/m/it/10 re-call \T1/XCharter-TLF/m/n/10 and is math-e-mat-i-cally de-noted as $[]$.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--259
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--269
+Underfull \hbox (badness 10000) in paragraph at lines 291--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--273
+Underfull \hbox (badness 10000) in paragraph at lines 295--298
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--283
+Underfull \hbox (badness 10000) in paragraph at lines 306--308
 
  []
 
-[5]
-<../code/outputs//Q3b.png, id=65, 462.528pt x 346.896pt>
+[13]
+<../code/outputs//Q3b.png, id=115, 462.528pt x 346.896pt>
 File: ../code/outputs//Q3b.png Graphic file (type png)
 <use ../code/outputs//Q3b.png>
-Package pdftex.def Info: ../code/outputs//Q3b.png  used on input line 294.
+Package pdftex.def Info: ../code/outputs//Q3b.png  used on input line 319.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
-<../code/outputs//code:Q3b.png, id=67, 707.64375pt x 631.35875pt>
+<../code/outputs//code:Q3b.png, id=117, 707.64375pt x 631.35875pt>
 File: ../code/outputs//code:Q3b.png Graphic file (type png)
 <use ../code/outputs//code:Q3b.png>
-Package pdftex.def Info: ../code/outputs//code:Q3b.png  used on input line 298.
+Package pdftex.def Info: ../code/outputs//code:Q3b.png  used on input line 323.
 (pdftex.def)             Requested size: 353.82101pt x 315.6786pt.
- [6 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//Q3b.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:Q3b.png>]
-<../code/outputs//psuedo:code:q3c.png, id=75, 986.68625pt x 654.445pt>
+ [14 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//Q3b.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:Q3b.png>]
+<../code/outputs//psuedo:code:q3c.png, id=125, 986.68625pt x 654.445pt>
 File: ../code/outputs//psuedo:code:q3c.png Graphic file (type png)
 <use ../code/outputs//psuedo:code:q3c.png>
-Package pdftex.def Info: ../code/outputs//psuedo:code:q3c.png  used on input line 305.
+Package pdftex.def Info: ../code/outputs//psuedo:code:q3c.png  used on input line 330.
 (pdftex.def)             Requested size: 424.26682pt x 281.40587pt.
-<../code/outputs//q3c.png, id=76, 462.528pt x 346.896pt>
+<../code/outputs//q3c.png, id=126, 462.528pt x 346.896pt>
 File: ../code/outputs//q3c.png Graphic file (type png)
 <use ../code/outputs//q3c.png>
-Package pdftex.def Info: ../code/outputs//q3c.png  used on input line 310.
+Package pdftex.def Info: ../code/outputs//q3c.png  used on input line 335.
 (pdftex.def)             Requested size: 416.27133pt x 312.2035pt.
-<../code/outputs//code:q3c.png, id=77, 726.715pt x 885.3075pt>
+<../code/outputs//code:q3c.png, id=127, 726.715pt x 885.3075pt>
 File: ../code/outputs//code:q3c.png Graphic file (type png)
 <use ../code/outputs//code:q3c.png>
-Package pdftex.def Info: ../code/outputs//code:q3c.png  used on input line 312.
+Package pdftex.def Info: ../code/outputs//code:q3c.png  used on input line 337.
 (pdftex.def)             Requested size: 363.3566pt x 442.65266pt.
- [7 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//psuedo:code:q3c.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q3c.png>] [8 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:q3c.png>]
-<../code/outputs//psuedo:code:q3d.png, id=91, 1092.08pt x 636.3775pt>
+ [15 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//psuedo:code:q3c.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q3c.png>] [16 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:q3c.png>]
+<../code/outputs//psuedo:code:q3d.png, id=140, 1092.08pt x 636.3775pt>
 File: ../code/outputs//psuedo:code:q3d.png Graphic file (type png)
 <use ../code/outputs//psuedo:code:q3d.png>
-Package pdftex.def Info: ../code/outputs//psuedo:code:q3d.png  used on input line 317.
+Package pdftex.def Info: ../code/outputs//psuedo:code:q3d.png  used on input line 342.
 (pdftex.def)             Requested size: 436.82426pt x 254.5465pt.
-<../code/outputs//q3d.png, id=92, 462.528pt x 346.896pt>
+<../code/outputs//q3d.png, id=141, 462.528pt x 346.896pt>
 File: ../code/outputs//q3d.png Graphic file (type png)
 <use ../code/outputs//q3d.png>
-Package pdftex.def Info: ../code/outputs//q3d.png  used on input line 319.
+Package pdftex.def Info: ../code/outputs//q3d.png  used on input line 344.
 (pdftex.def)             Requested size: 416.27133pt x 312.2035pt.
-<../code/outputs//code:q3d.png, id=93, 763.85374pt x 909.3975pt>
+<../code/outputs//code:q3d.png, id=142, 763.85374pt x 909.3975pt>
 File: ../code/outputs//code:q3d.png Graphic file (type png)
 <use ../code/outputs//code:q3d.png>
-Package pdftex.def Info: ../code/outputs//code:q3d.png  used on input line 321.
+Package pdftex.def Info: ../code/outputs//code:q3d.png  used on input line 346.
 (pdftex.def)             Requested size: 305.53607pt x 363.75256pt.
- [9 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//psuedo:code:q3d.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q3d.png>]
-<../code/outputs//psuedo:code:q3e.png, id=101, 1071.00125pt x 678.535pt>
+ [17 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//psuedo:code:q3d.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q3d.png>]
+<../code/outputs//psuedo:code:q3e.png, id=150, 1071.00125pt x 678.535pt>
 File: ../code/outputs//psuedo:code:q3e.png Graphic file (type png)
 <use ../code/outputs//psuedo:code:q3e.png>
-Package pdftex.def Info: ../code/outputs//psuedo:code:q3e.png  used on input line 325.
+Package pdftex.def Info: ../code/outputs//psuedo:code:q3e.png  used on input line 350.
 (pdftex.def)             Requested size: 428.39291pt x 271.40918pt.
-<../code/outputs//q3e.png, id=102, 462.528pt x 346.896pt>
+<../code/outputs//q3e.png, id=151, 462.528pt x 346.896pt>
 File: ../code/outputs//q3e.png Graphic file (type png)
 <use ../code/outputs//q3e.png>
-Package pdftex.def Info: ../code/outputs//q3e.png  used on input line 327.
+Package pdftex.def Info: ../code/outputs//q3e.png  used on input line 352.
 (pdftex.def)             Requested size: 416.27133pt x 312.2035pt.
- [10 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:q3d.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//psuedo:code:q3e.png>]
-<../code/outputs//code:q3e.png, id=110, 777.90625pt x 913.4125pt>
+ [18 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:q3d.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//psuedo:code:q3e.png>]
+<../code/outputs//code:q3e.png, id=159, 777.90625pt x 913.4125pt>
 File: ../code/outputs//code:q3e.png Graphic file (type png)
 <use ../code/outputs//code:q3e.png>
-Package pdftex.def Info: ../code/outputs//code:q3e.png  used on input line 329.
+Package pdftex.def Info: ../code/outputs//code:q3e.png  used on input line 354.
 (pdftex.def)             Requested size: 311.15698pt x 365.35854pt.
- [11 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q3e.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:q3e.png>] [12] (/Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux)
+ [19 </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//q3e.png> </Users/williamcoulter/Documents/COMP9417/final_exam/latex/../code/outputs//code:q3e.png>] [20] (/Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25116 strings out of 478994
- 441922 string characters out of 5858184
+ 25191 strings out of 478994
+ 443766 string characters out of 5858184
  749966 words of memory out of 5000000
- 42073 multiletter control sequences out of 15000+600000
+ 42123 multiletter control sequences out of 15000+600000
  451897 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,8n,141p,599b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch_rydp4l.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch1_co4ru4.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Italic.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (12 pages, 1388437 bytes).
+Output written on /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.pdf (20 pages, 33518737 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 127 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 68 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
