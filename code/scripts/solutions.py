@@ -23,7 +23,7 @@ def plot_perceptron(ax, X, y, w, v=None):
 
     xx = np.linspace(-1.5,0)
     yy = -w[0]/w[2] - w[1]/w[2] * xx
-    ax.plot(xx, yy, color='orange')
+    # ax.plot(xx, yy, color='orange')
 
     ratio = (w[2]/w[1] + w[1]/w[2])
     xpt = (-1*w[0] / w[2]) * 1/ratio
@@ -34,10 +34,10 @@ def plot_perceptron(ax, X, y, w, v=None):
 
     # For some of the winnow algorithms
     if v is not None:
-        
+
         xx = np.linspace(-1.5,0)
         yy = -v[0]/v[2] - v[1]/v[2] * xx
-        ax.plot(xx, yy, color='purple')
+        # ax.plot(xx, yy, color='purple')
 
         ratio = (v[2]/v[1] + v[1]/v[2])
         xpt = (-1*v[0] / v[2]) * 1/ratio
@@ -172,7 +172,7 @@ def train_balanced_winnow(X, y, max_iter=100):
     # for t = 1, ... , max iter:
     #
     #   (Check if there are any mistakes according to the current decision function)
-    #   if there is an index i s.t: 
+    #   if there is an index i s.t:
     #               y[i] * [dotproduct(u[t], x[i]) - dotproduct(v[t], x[i]) - threshold] <= 0:
     #
     #       (Check if promotion or demotion)
@@ -235,6 +235,83 @@ def train_balanced_winnow(X, y, max_iter=100):
     # Max iterations reached, return the latest w vector
     return u[max_iter - 1], v[max_iter - 1], max_iter
 
+def train_modified_winnow(X, y, max_iter=100):
+
+    # input: (x1, y1), ... ,(xn, yn)
+    # initialise: v[0] = (0+, 0+,..., 0+) ∈ R
+    # initialise: u[0] = (0-, 0-,..., 0-) ∈ R
+    #
+    # for t = 1, ... , max iter:
+    #
+    #   (Check if there are any mistakes according to the current decision function)
+    #   if there is an index i s.t:
+    #               y[i] * [dotproduct(u[t], x[i]) - dotproduct(v[t], x[i]) - threshold] <= M:
+    #
+    #       for j = 0, ... , number of features
+    #            (Check if promotion or demotion)
+    #            u_multiplier = alpha * (1 + x[i][j])
+    #            v_multiplier = beta * (1 - x[i][j])
+    #
+    #            if y[i] < 0:
+    #                u_multiplier = beta * (1 - x[i][j])
+    #                v_multiplier = alpha * (1 + x[i][j])
+    #
+    #            (Update the positive and negative models)
+    #            u[t+1][j] = u[t][j] * u_multiplier
+    #            v[t+1][j] = v[t][j] * v_multiplier
+    #
+    #   (No errors and the algorithm has converged)
+    #   else:
+    #       output w[t], t
+
+    np.random.seed(2)
+
+    promotion = 1.5
+    demotion = 0.5
+    threshold = 1.0
+    margin = 1.0
+
+    # Initialise vectors for each iteration
+    nfeatures = X.shape[1]
+    u = np.full(shape=(max_iter, nfeatures), fill_value=2.0)
+    v = np.full(shape=(max_iter, nfeatures), fill_value=1.0)
+
+    # Iterate and adjust w
+    for t in range(max_iter - 1):
+
+        # Calculate any mistakes according to the decision function at w[t]
+        decision_matrix = X @ u[t].T - X @ v[t].T -threshold
+        mistakes_matrix = y * decision_matrix
+        mistake_idxs = np.where(mistakes_matrix <= margin)[0]
+
+        # If there are mistakes, choose a random one and
+        # update accordingly
+        if mistake_idxs.size > 0:
+            print(f"Mistake found at iteration {t + 1}")
+            i = np.random.choice(mistake_idxs)
+
+            for j in range(len(X[i])):
+                u_multiplier = promotion * (1 + X[i][j])
+                v_multiplier = demotion + (1 - X[i][j])
+
+                if y[i] < 0:
+                    u_multiplier = demotion + (1 - X[i][j])
+                    v_multiplier = promotion * (1 + X[i][j])
+
+                # No need to check if the corresponding feature is strictly > 0
+                u[t+1][j] = u[t][j] * u_multiplier
+                v[t+1][j] = v[t][j] * v_multiplier
+
+            print(f"v: {v[t]}")
+            print(f"u: {u[t]}")
+
+        else:
+            # Converged
+            return u[t], v[t], t + 1
+
+    # Max iterations reached, return the latest w vector
+    return u[max_iter - 1], v[max_iter - 1], max_iter
+
 def q3b():
     # import data
     X = import_data(Q3X_DIR)
@@ -277,6 +354,22 @@ def q3d():
     ax.set_title(f"\nu={u}\nv={v}\niterations={nmb_iter}")
     plt.savefig("outputs/Q3d.png", dpi=500)
 
+def q3e():
+    # import data
+    X = import_data(Q3X_DIR)
+    y = import_data(Q3Y_DIR)
+
+    # create perceptron
+    u, v, nmb_iter = train_modified_winnow(X,y)
+
+    # Plot
+    fig, ax = plt.subplots()
+    plot_perceptron(ax, X, y, u+v)
+    ax.set_title(f"u+v={u+v}\niterations={nmb_iter}")
+    plt.xlim([-0.5,1.5])
+    plt.ylim([-1,2])
+    plt.savefig("outputs/Q3e.png", dpi=500)
+
 ### MAIN ###
 
 def command_line_parsing():
@@ -293,7 +386,8 @@ if __name__ == "__main__":
     questions = {
         "q3b": q3b,
         "q3c": q3c,
-        "q3d": q3d
+        "q3d": q3d,
+        "q3e": q3e
     }
 
     # Execute the given command
