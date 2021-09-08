@@ -20,7 +20,7 @@ def plot_perceptron(ax, X, y, w):
     neg_points = X[np.where(y==-1)[0]]
     ax.scatter(pos_points[:, 1], pos_points[:, 2], color='blue')
     ax.scatter(neg_points[:, 1], neg_points[:, 2], color='red')
-    xx = np.linspace(-1,1)
+    xx = np.linspace(-1.5,0)
     yy = -w[0]/w[2] - w[1]/w[2] * xx
     ax.plot(xx, yy, color='orange')
 
@@ -36,7 +36,7 @@ def plot_perceptron(ax, X, y, w):
 
 def train_perceptron(X, y, max_iter=100):
     # Psuedo code following:
-    # 
+    #
     # input: (x1, y1), ... ,(xn, yn)
     # initialise: w(0) = (0, 0, ... , 0) ∈ R
     # for t = 1, ... , max iter :
@@ -51,24 +51,99 @@ def train_perceptron(X, y, max_iter=100):
     # Initialise w vector (1 for each iteration)
     nfeatures = X.shape[1]
     w = np.zeros((max_iter, nfeatures))
-    w[0] = np.zeros(nfeatures)
+    # w[0] = np.zeros(nfeatures)
 
     # Iterate and adjust w
     for t in range(max_iter - 1):
-        
+
         # Dot product multipled by y
         yXw = y * (X @ w[t].T)
         mistake_idxs = np.where(yXw <= 0)[0]
 
-        # If there are mistakes, choose a random one and 
+        # If there are mistakes, choose a random one and
         # update accordingly
         if mistake_idxs.size > 0:
             print(f"Mistake found at iteration {t + 1}")
-            
+
             i = np.random.choice(mistake_idxs)
             w[t + 1] = w[t] + y[i] * X[i]
 
         else:
+            return w[t], t + 1
+
+    # Max iterations reached, return the latest w vector
+    return w[max_iter - 1], max_iter
+
+def train_positive_winnow(X, y, max_iter=100):
+
+    # input: (x1, y1), ... ,(xn, yn)
+    # initialise: w[0] = (1, 1, ... , 1) ∈ R
+    #
+    # for t = 1, ... , max iter:
+    #
+    #   (Check if there are any mistakes according to the current decision function)
+    #   if there is an index i s.t: y[i] * [dotproduct(w(t), x[i]) - threshold] <= 0:
+    #
+    #       (Check if promotion or demotion)
+    #       multiplier = alpha
+    #       if y[i] < 0:
+    #           multipler = beta
+    #
+    #       (Update the weight vector)
+    #       for j in 0 .. length(w[t]):
+    #
+    #           (Check if the corresponding feature is strictly > 0)
+    #           if x[i][j] > 0:
+    #               w[t+1][j] = w[t][j] * multiplier
+    #           else:
+    #               w[t+1][j] = w[t][j]
+    #
+    #   (No errors and the algorithm has converged)
+    #   else:
+    #       output w[t], t
+
+    np.random.seed(2)
+
+    promotion = 1.5
+    demotion = 0.5
+    threshold = 1.0
+    initialisation = 1.0
+
+    # Initialise w vector for each iteration
+    nfeatures = X.shape[1]
+    w = np.full(shape=(max_iter, nfeatures), fill_value=initialisation)
+
+    # Iterate and adjust w
+    for t in range(max_iter - 1):
+
+        # Calculate any mistakes according to the decision function at w[t]
+        decision_matrix = X @ w[t].T - threshold
+        mistakes_matrix = y * decision_matrix
+        mistake_idxs = np.where(mistakes_matrix <= 0)[0]
+
+        # If there are mistakes, choose a random one and
+        # update accordingly
+        if mistake_idxs.size > 0:
+            print(f"Mistake found at iteration {t + 1}")
+            i = np.random.choice(mistake_idxs)
+
+            multiplier = promotion
+            if y[i] < 0:
+                multiplier = demotion
+
+            for j in range(len(w[t])):
+                # Check if the corresponding feature is strictly > 0)
+                if X[i][j] > 0:
+                    w[t+1][j] = w[t][j] * multiplier
+                else:
+                    w[t+1][j] = w[t][j]
+
+            print(f"old w: {w[t]}")
+            print(f"new w: {w[t+1]}")
+
+
+        else:
+            # Converged
             return w[t], t + 1
 
     # Max iterations reached, return the latest w vector
@@ -88,6 +163,20 @@ def q3b():
     ax.set_title(f"w={w}, iterations={nmb_iter}")
     plt.savefig("outputs/Q3b.png", dpi=500)
 
+def q3c():
+    # import data
+    X = import_data(Q3X_DIR)
+    y = import_data(Q3Y_DIR)
+
+    # create perceptron
+    w, nmb_iter = train_positive_winnow(X,y)
+
+    # Plot
+    fig, ax = plt.subplots()
+    plot_perceptron(ax, X, y, w)
+    ax.set_title(f"w={w}, iterations={nmb_iter}")
+    plt.savefig("outputs/Q3c.png", dpi=500)
+
 ### MAIN ###
 
 def command_line_parsing():
@@ -102,7 +191,8 @@ if __name__ == "__main__":
     args = command_line_parsing().parse_args()
 
     questions = {
-        "q3b": q3b
+        "q3b": q3b,
+        "q3c": q3c
     }
 
     # Execute the given command
