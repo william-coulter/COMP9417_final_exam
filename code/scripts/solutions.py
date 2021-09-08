@@ -350,8 +350,10 @@ def q3d():
 
     # Plot
     fig, ax = plt.subplots()
-    plot_perceptron(ax, X, y, u, v=v)
-    ax.set_title(f"\nu={u}\nv={v}\niterations={nmb_iter}")
+    plot_perceptron(ax, X, y, u+v)
+    ax.set_title(f"u+v={u+v}\niterations={nmb_iter}")
+    plt.xlim([-0.5,1.5])
+    plt.ylim([-1,2])
     plt.savefig("outputs/Q3d.png", dpi=500)
 
 def q3e():

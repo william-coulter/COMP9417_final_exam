@@ -60,9 +60,13 @@ regression scheme (i) to have a larger gradient than (ii) since there is a small
 Regression schemes (iii) and (iv) would have a smaller y-intercept than (i) and (ii) since \(w_{0}\) is included in their penalties. Scheme (iv) would have 
 a smaller gradient and y-intercept than (iii) since its penalty hyperparameter is larger (\(\lambda = 10\)).\\
 
-From the above reasoning, regression scheme (i) matches (a) (it has the largest gradient), (ii) matches (b) (a smaller gradient than (i) but the highest \(w_{0}\) since this
-is not in the regression's penalty term), (iii) matches (c) (a relatively small gradient y-intercept) and (iv) matches (d) ((iv) has a large penalty hyperparameter
-so the model would be encouraged to have a small gradient and y-intercept. (d) has the smallest y-intercept and a relatively small gradient).
+From the above reasoning:
+\begin{itemize}
+    \item \textbf{(i) matches (a)}: (i) has the largest gradient
+    \item \textbf{(ii) matches (b)}: a smaller gradient than (i) but the highest \(w_{0}\) since this is not in the regression's penalty term
+    \item \textbf{(iii) matches (c)}: a relatively small gradient y-intercept
+    \item \textbf{(iv) matches (d)}: (iv) has a large penalty hyperparameter so the model would be encouraged to have a small gradient and y-intercept. (d) has the smallest y-intercept and a relatively small gradient
+\end{itemize}
 
 \subsection*{c}
 
@@ -160,7 +164,7 @@ in NLP tasks where the \(x_{t}^{j}\) is related to the frequency of a term. Inco
 1. The data is also normalised across all features if that feature occurs in the current model (\(w_{i}\)).\\
 
 Each Winnow algorithm has a promotion parameter \(\alpha > 1\), a demotion parameter \(0 < \beta < 1\) and a threshold parameter \(\theta_{th} > 0\).
-The Positive Winnow algorithm follows very similarly to the Perceptron however its decision function (definition of a mistake) is given by
+The Positive Winnow algorithm follows very similarly to the Perceptron however its decision function (classification) is given by
 \(f = sign(\langle x_{t}, w_{i} \rangle - \theta_{th})\). Additionally, the update rule on vector \(w_{t}\) is different: 
 for all \(j\) where \(x_{t}^{j} > 0\)
 
@@ -276,6 +280,20 @@ occurred at. This is the other way around in the provided paper.
 
 \newpage
 \subsection*{d}
+
+\subsection*{e}
+
+The balanced and modified Winnow algorithms have 2 main differences. The first is
+how the algorithms consider a mistake. The Balanced Winnow will consider an incoming 
+data point mistake if the decision function predicts it incorrectly 
+(\(y[t] * sign(\langle x_{t}, u_{i} \rangle - \langle x_{t}, v_{i} \rangle - \theta_{th}) \leq 0\)).
+The Modified Winnow considers a data point a mistake if the decision function predicts
+the incoming data point \emph{within a margin}. 
+(\(y[t] * sign(\langle x_{t}, u_{i} \rangle - \langle x_{t}, v_{i} \rangle - \theta_{th}) \leq M\))
+The second is how the vectors update when a mistake occurs. In the Modified Winnow, the multiplicative correction 
+depends on the particular feature weight of the incoming example (\(x_{t}^{j}\)), rather than 
+correcting by a constant (\(\alpha\) or \(\beta\)). This makes the corrections
+in the Modified Winnow more aggressive.
 
 
 

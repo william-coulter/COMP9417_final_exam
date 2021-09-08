@@ -1147,6 +1147,11 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/xcharter/TS1XCharter-TLF.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/xcharter/TS1XCharter-TLF.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/xcharter/TS1XCharter-TLF.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/xcharter/TS1XCharter-TLF.fd
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Roman-ts1.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/xcharter/XCharter-Bold-tlf-t1.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/xcharter/XCharter-Bold-tlf-t1.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/xcharter/XCharter-Bold-tlf-t1--base.tfm
@@ -1155,6 +1160,8 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/xcharter/XCharter-Bold-
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/xcharter/XCharter-Bold-tlf-t1--base.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/xcharter/XCharter-Roman-tlf-t1.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/xcharter/XCharter-Roman-tlf-t1--base.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/xcharter/XCharter1-Roman-ts1.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Roman-ts1--base.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/xcharter/XCharter-Bold-tlf-t1.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/xcharter/XCharter-Bold-tlf-t1--base.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/xcharter/XCharter-Italic-tlf-t1.tfm
@@ -1189,6 +1196,7 @@ INPUT /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.aux
 INPUT /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.out
 INPUT /Users/williamcoulter/Documents/COMP9417/final_exam/latex/main.out
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch_rydp4l.enc
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/xcharter/xch1_co4ru4.enc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Italic.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb
