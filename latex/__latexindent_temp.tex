@@ -134,6 +134,43 @@ Therefore at least 7,099 data points are needed to ensure the version space is \
 \subsection*{f}
 
 \newpage
+\section*{Question 2}
+
+\subsection*{a}
+
+\subsection*{d}
+
+The statement is falsifiable since SVMs do have a way to handle non-linearly separable data.
+The first way is by creating a "soft margin" to accommodate for some errors. The second is by projecting
+the dataset into higher dimensions such that it is linearly separable. Although the projection to 
+a higher dimension comes at a computational cost, it does not affect the performance of the 
+SVM. This is how SVMs can handle non-linearly separable data and why the statement 
+is incorrect.
+
+\subsection*{e}
+
+As mentioned in (d), non-linearly separable data can be projected into higher dimensions such that it is 
+linearly separable. Working in these higher dimensional spaces can come at a 
+computational cost that is sometimes impractical. The \textbf{kernel trick} is a method of dealing
+with this problem by representing the data as a mapping from an input vector 
+to the dot product of the vectors in the higher dimensional space. The "trick" is that this method doesn't explicitly apply the 
+expensive transformation into a higher dimensional space. This is how impractical projections into higher
+dimensional space can become practical, which is important for SVM and other ML methods that 
+require linearly separable data and is why the kernel trick is such an important technique in machine learning.
+
+\subsection*{f}
+
+After the forgotten data point is added back in, the dataset it still 
+linearly separable. Support vectors are instances that are closest to the
+maximum margin hyperplane. Let's assume that this is a binary classification. 
+Every single data point could be a support vector if they all lie exactly on the 
+maximum margin hyperplane. This means the maximum number of support vectors in this 
+dataset is 51. Conversely, the minimum number of support vectors needed 
+is 2 since, in a hard-margined SVM, there will always be a hyperplane with 2 
+decision boundaries and each of these boundaries will have an associated closest
+instance (support vector).
+
+\newpage
 \section*{Question 3}
 
 \subsection*{a}
